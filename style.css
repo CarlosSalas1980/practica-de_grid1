@@ -1,0 +1,129 @@
+:root {
+  --primary-color: rgb(236, 236, 236);
+  --secondary-color: rgb(21, 21, 21);
+  --blue-color: #2bc5cd;
+  --orange-color: #ff693d;
+  --border: 2px solid var(--blue-color);
+  --spacing: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Resto del CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  height: 100vh;
+  grid-gap: var(--spacing);
+  background-color: var(--primary-color);
+  margin: var(--spacing);
+}
+
+header {
+  display: grid;
+  align-content: stretch;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-color: var(--blue-color);
+  color: var(--primary-color);
+}
+header > H1 {
+  text-transform: uppercase;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 20px;
+}
+header > p {
+  font-size: 12px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+main {
+  margin: 0;
+  font-size: 12px;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+  color: var(--blue-color);
+  border: var(--border);
+  text-transform: uppercase;
+}
+
+.school {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg);
+}
+
+.student {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg);
+}
+
+.time {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg);
+}
+
+.alumni {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
+}
+footer {
+  display: grid;
+  justify-content: space-evenly;
+  grid-column: 2/4;
+  grid-row: 3/4;
+  background-color: var(--orange-color);
+  color: var(--primary-color);
+  text-align: start;
+}
+h3 {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+footer > p {
+  font-size: 15px;
+  text-align: start;
+  margin-left: 15px;
+}
+footer > button {
+  text-transform: uppercase;
+  width: 200px;
+  height: 15 px;
+  margin-left: 15px;
+  margin-bottom: 35px;
+  font-weight: bold;
+}
+
+.alumni,
+.school,
+.student,
+.time {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 866px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit(2, auto));
+    height: 100vh;
+    grid-gap: var(--spacing);
+    background-color: var(--primary-color);
+    margin: var(--spacing);
+  }
+}
